@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин брендового одягу та взуття | Купити Nike, Jordan, Stone Island</title>
+    <meta name="description" content="Стильний чоловічий одяг, шорти, футболки, худі та взуття від топових світових брендів. Швидка доставка, найкращі ціни в Україні. Заходьте та обирайте!">
+    <meta name="keywords" content="брендовий одяг, купити шорти nike, футболки jordan, штани stone island, чоловічі кросівки">
+</head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<meta property="og:image" content="logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Impact&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Price Drop</div>
+        
+        <nav class="nav-links">
+            <a href="index2.html">Каталог товарів <span class="arrow"></span></a>
+            <a href="index4.html">Про нас</a>
+            <a href="index3.html">Бренди</a>
+        </nav>
+
+        <div class="search-bar">
+            <span class="search-icon"></span>
+            <input type="text" placeholder="Пошук товарів...">
+        </div>
+
+        <div class="user-actions">
+    
+            <div class="burger-menu-wrapper">
+                <button class="burger-btn" onclick="toggleBurgerMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="burger-menu" id="burgerMenu">
+                    <a href="index2.html">Каталог товарів</a>
+                    <a href="index4.html">Про нас</a>
+                    <a href="index3.html">Бренди</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main class="hero-section">
+        <div class="hero-container">
+            
+            <div class="hero-content">
+                <h1>ЗНАЙДИ ОДЯГ, ЩО ПІДХОДИТЬ ТВОЄМУ СТИЛЮ</h1>
+                <p class="hero-desc">
+                    Перегляньте наш різноманітний асортимент ретельно створеного одягу, 
+                    розробленого, щоб підкреслити вашу індивідуальність та задовольнити ваш смак.
+                </p>
+<a href="index2.html">
+    <button class="cta-button">Купувати зараз</button>
+</a>
+
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <h2>50+</h2>
+                        <p>Міжнародних брендів</p>
+                    </div>
+                    <div class="stat-item">
+                        <h2>500+</h2>
+                        <p>Високоякісних товарів</p>
+                    </div>
+                    <div class="stat-item border-none">
+                        <h2>5,000+</h2>
+                        <p>Задоволених клієнтів</p>
+                    </div>
+                </div>
+            </div>
+
+<div class="hero-images">
+    <img src="man.png" alt="Моделі в одязі" class="main-models-img">
+    <img src="man2.png" alt="Моделі в одязі" class="main-models-img">
+</div>
+
+        </div>
+    </main>
+
+<section class="brands-ticker">
+    <div class="brands-track">
+        <div class="brands-group">
+            <span class="brand-polo">POLO RALPH</span>
+            <span class="brand-nike">NIKE</span>
+            <span class="brand-ea7">EA7</span>
+            <span class="brand-stone">STONE ISLAND</span>
+            <span class="brand-boss">BOSS</span>
+            <span class="brand-jordan">JORDAN</span>
+        </div>
+        <div class="brands-group">
+            <span class="brand-polo">POLO RALPH</span>
+            <span class="brand-nike">NIKE</span>
+            <span class="brand-ea7">EA7</span>
+            <span class="brand-stone">STONE ISLAND</span>
+            <span class="brand-boss">BOSS</span>
+            <span class="brand-jordan">JORDAN</span>
+        </div>
+        <div class="brands-group">
+            <span class="brand-polo">POLO RALPH</span>
+            <span class="brand-nike">NIKE</span>
+            <span class="brand-ea7">EA7</span>
+            <span class="brand-stone">STONE ISLAND</span>
+            <span class="brand-boss">BOSS</span>
+            <span class="brand-jordan">JORDAN</span>
+        </div>
+    </div>
+</section>
+
+<section class="new-arrivals">
+    <h2 class="section-title">НОВІ НАДХОДЖЕННЯ</h2>
+    
+    <div class="products-desktop-grid">
+        <div class="product-card">
+            <div class="product-img-wrapper"><img src="1/1.JPG" alt="Футболка" class="product-img"></div>
+            <h3 class="product-name">Лляні штани темно-сині</h3>
+            <div class="product-rating"><div class="stars">★★★★★</div><span class="rating-value">4.5/5</span></div>
+            <div class="product-price"><span class="current-price">850.00 грн</span></div>
+        </div>
+        <div class="product-card">
+            <div class="product-img-wrapper"><img src="1/2.JPG" alt="Джинси" class="product-img"></div>
+            <h3 class="product-name">Лляні штани бежеві</h3>
+            <div class="product-rating"><div class="stars">★★★★☆</div><span class="rating-value">4.5/5</span></div>
+            <div class="product-price"><span class="current-price">850.00 грн</span><span class="old-price"></span><span class="discount">-10%</span></div>
+        </div>
+        <div class="product-card">
+            <div class="product-img-wrapper"><img src="1/3.JPG" alt="Сорочка" class="product-img"></div>
+            <h3 class="product-name">Лляні штани білі</h3>
+            <div class="product-rating"><div class="stars">★★★★★</div><span class="rating-value">4.5/5</span></div>
+            <div class="product-price"><span class="current-price">850.00</span></div>
+        </div>
+        <div class="product-card">
+            <div class="product-img-wrapper"><img src="1/4.JPG" alt="Футболка" class="product-img"></div>
+            <h3 class="product-name">Лляні штани чорні</h3>
+            <div class="product-rating"><div class="stars">★★★★★</div><span class="rating-value">4.5/5</span></div>
+            <div class="product-price"><span class="current-price">850.00 грн</span><span class="old-price"></span><span class="discount">-10%</span></div>
+        </div>
+    </div>
+
+    <div class="products-mobile-slider-wrapper">
+        <div class="swiper products-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide product-card">
+                    <div class="product-img-wrapper"><img src="1/1.JPG" alt="Футболка" class="product-img"></div>
+                    <h3 class="product-name">Лляні штани темно - сині</h3>
+                    <div class="product-rating"><div class="stars">★★★★★</div><span class="rating-value">4.5/5</span></div>
+                    <div class="product-price"><span class="current-price">850.00 грн</span></div>
+                </div>
+                <div class="swiper-slide product-card">
+                    <div class="product-img-wrapper"><img src="1/2.JPG" alt="Джинси" class="product-img"></div>
+                    <h3 class="product-name">Лляні штани бежеві</h3>
+                    <div class="product-rating"><div class="stars">★★★★☆</div><span class="rating-value">4.0/5</span></div>
+                    <div class="product-price"><span class="current-price">850.00 грн</span><span class="old-price"></span><span class="discount">-10%</span></div>
+                </div>
+                <div class="swiper-slide product-card">
+                    <div class="product-img-wrapper"><img src="1/3.JPG" alt="Сорочка" class="product-img"></div>
+                    <h3 class="product-name">Лляні штани білі</h3>
+                    <div class="product-rating"><div class="stars">★★★★★</div><span class="rating-value">4.5/5</span></div>
+                    <div class="product-price"><span class="current-price">850.00 грн</span></div>
+                </div>
+                <div class="swiper-slide product-card">
+                    <div class="product-img-wrapper"><img src="1/4.JPG" alt="Футболка" class="product-img"></div>
+                    <h3 class="product-name">Лляні штани чорін</h3>
+                    <div class="product-rating"><div class="stars">★★★★★</div><span class="rating-value">4.5/5</span></div>
+                    <div class="product-price"><span class="current-price">850.00 грн</span><span class="old-price"></span><span class="discount">-10%</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-arrow prev-arrow">❮</div>
+        <div class="slider-arrow next-arrow">❯</div>
+    </div>
+</section>
+
+<section class="style-browse">
+    <div class="style-container">
+        <h2 class="style-title">ОБЕРИ ЗА СТИЛЕМ ОДЯГУ</h2>
+        
+        <div class="style-grid">
+            <div class="style-card card-w30">
+                <img src="повсякденний.jpg" alt="Повсякденний">
+                <span class="style-name">База</span>
+            </div>
+            
+            <div class="style-card card-w60">
+                <img src="офіційний.PNG" alt="Офіційний">
+                <span class="style-name">Офіційний</span>
+            </div>
+            
+            <div class="style-card card-w60">
+                <img src="вечірній.JPG" alt="Вечірній">
+                <span class="style-name">Вечірній</span>
+            </div>
+            
+            <div class="style-card card-w30">
+                <img src="спорт.jpg" alt="Спортивний">
+                <span class="style-name">Спортивний</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reviews-section">
+    <div class="reviews-header">
+        <h2 class="reviews-title">ВІДГУКИ НАШИХ КЛІЄНТІВ</h2>
+        <div class="reviews-arrows">
+            <span class="review-arrow prev-review">←</span>
+            <span class="review-arrow next-review">→</span>
+        </div>
+    </div>
+
+    <div class="swiper reviews-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Олександр К. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Брав тут футболку Nike, якість просто супер! Матеріал приємний до тіла, після прання не сіла і колір не втратила. Все топ, рекомендую!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Максим В. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Замовив кросівки Jordan та худі. Доставка мегашвидка, упаковано акуратно. Одяг сидить ідеально, оригінальна якість відразу відчувається."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Артем Д. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Шукав оригінальну спортивну кофту EA7 і знайшов тут за чудовою ціною. Шви рівні, нитки не стирчать. Дякую за сервіс!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Дмитро П. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Класний магазин із великим асортиментом брендового одягу. Куртка Stone Island підійшла чудово, фурнітура топова. Замовлятиму ще обов'язково."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Сергій М. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Сервіс на висоті, менеджер допоміг точно підібрати розмір костюма BOSS. Все підійшло ідеально, матеріали дуже якісні та дихаючі."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Іван Т. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Поло Ralph Lauren підійшло ідеально, тканина щільна і натуральна. Після трьох пранів виглядає як нове. Дуже задоволений покупкою."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Андрій С. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Швидка доставка та приємні ціни на оригінал. Вітровка Nike сіла як треба, захищає від вітру на всі сто. Магазину великий респект!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Ярослав О. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Вже не перший раз купую тут речі. Худі Jordan як завжди на висоті, колір яскравий, зсередини дуже м'яке. Все просто супер."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Олег Б. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Замовив кепку і шорти Ralph Lauren. Переживав за розмір, але все сіло чудово. Товар оригінальний, рекомендую!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Микола З. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Магазин супер, відправили в день замовлення. Кросівки Nike оригінал 100%, всі бірки та коробка на місці. Буду купувати тут надалі."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Володимир Ю. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Чудова якість трикотажу. Спортивні штани EA7 приємні до тіла, коліна не витягуються. Сервіс магазину дуже швидкий, дякую!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Євген Р. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Все на найвищому рівні. Світшот Stone Island топ, оригінальний патч і крутий крій. Підійде під будь-які джинси."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Роман Н. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Довго шукав саме таку модель сорочки BOSS. Знайшов тут, ціна адекватна, якість тканини відмінна. Жодних нарікань немає."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Богдан В. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Купив зимову куртку Tommy Hilfiger. Тепла, легка, колір глибокий. Дуже задоволений якістю та консультацією менеджера."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Віталій К. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Якість бомба! Оригінальні кросівки Adidas відразу видно за амортизацією та швами. Доставка новою поштою за один день. Все супер!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Денис Ш. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Замовив термобілизну і шкарпетки Nike. Все підійшло за розмірною сіткою. Тканина чудово відводить вологу, для тренувань те що треба."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Олексій Л. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Дуже ввічливий персонал, підтвердили замовлення за 5 хвилин. Жилетка Calvin Klein сіла ідеально, якість топ, фурнітура YKK."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Ігор F. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Рюкзак Puma виявився навіть кращим, ніж на фото. Щільний якісний матеріал, багато відділень. Магазину ставлю 5 зірок!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Павло Г. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Задоволений на всі сто. Замовляв джинси Levi's на подарунок брату — він у захваті. Якість деніму просто бездоганна."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Назар С. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Шикарний бренд і чудовий магазин. Світшот Jordan оригінальний, тканина дуже м'яка з начісом. Буду замовляти тут ще речі."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Руслан Ц. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Лонгслів Nike супер, після прання не деформувався і рукава не сіли. Розмір відповідає опису. Дякую за швидку відправку!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Тарас П. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Все прийшло в оригінальній упаковці. Кофта на замку EA7 сіла чітко по плечах. Якість тканини дуже висока, колір насичений."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Вадим Х. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Чудовий вибір верхнього одягу. Парка Stone Island захищає від будь-якого дощу. Технологічний матеріал, оригінал."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Юрій М. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Покупкою дуже задоволений. Шорти BOSS приємні до тіла, шви рівні, логотип виконаний акуратно. Буду брати ще речі тут."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Анатолій Б. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Рекомендую цей магазин усім. Купив шкіряний ремінь Tommy Hilfiger, якість шкіри на висоті, пряжка масивна та надійна."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Станіслав Ж. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Прийшло все дуже швидко. Кросівки New Balance оригінал, замша натуральна, амортизація супер. Дуже задоволений покупкою."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Святослав В. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Спортивний костюм Nike просто бомбезний. Матеріал дихає, дизайн сучасний. Магазину дякую за оперативність."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Антон К. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Приємно мати справу з професіоналами. Офіційні штани BOSS оригінальні, підійшли розмір в розмір. Дуже крутий сервіс."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Валентин Д. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Найкраща якість за свої гроші. Панама і футболка Ralph Lauren сидять чудово, тканина дуже приємна на дотик."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Артур С. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Замовив бомбер Jordan, прийшов наступного дня. Якість супер, манжети щільні, фурнітура надійна. Рекомендую!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Владислав Р. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Одяг високої якості. Карго штани Stone Island повністю відповідають опису та фото. Матеріал міцний, колір вогонь."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Костянтин L. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Світшот Calvin Klein підійшов на 100%. Матеріал щільний, зсередини приємний фліс, якість шикарна. Магазин працює відмінно."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Остап Г. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Чудовий оригінальний худі Tommy Hilfiger. Сіло чудово, вишивка бренду акуратна. Тканина дуже м'яка і комфортна."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Марк О. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Все супер, кросівки Asics оригінальні, бірки на місці. Для бігу та залу підійшли відмінно. Дякую магазину за пораду."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Михайло Т. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Вітровка Columbia дуже крута, тканина повністю непромокаєма і легка. Сервіс магазину порадував — швидко відправили."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Леонід Н. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Шопінг вдався. Джинсова куртка Levi's підійшла за всіма параметрами. Денім щільний, колір класичний індиго. Все топ."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Гліб Я. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Замовив зимову шапку та шарф BOSS. Якість матеріалу відмінна, у складі є вовна, дуже теплі. Задоволений покупкою."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Валерій І. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Футболка та кеди Ralph Lauren супер якості. Шви міцні та рівні. Магазин відправив швидко, рекомендую до співпраці."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Борис F. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Все підійшло ідеально. Спортивна кофта Puma оригінальна, якість пошиття на вищому рівні. Замовлятиму тут ще обов'язково."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Ростислав В. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Оригінальний якісний товар. Футболка та шорти Jordan сіли ідеально за розміром. Дуже задоволений оперативністю роботи."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Кирило Е. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Чудовий анорак Nike, матеріал приємний на дотик і захищає від дощу. Дякую за швидку доставку оригінальних речей."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Данило Х. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Світшот EA7 дуже стильний і якісний. Тканина тримає форму після прання, сіла ідеально. Буду купувати тут ще речі."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Тимофій Ю. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Дуже задоволений якістю джинсів Calvin Klein. Колір насичений, денім еластичний та зручний. Доставка супер швидка."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Григорій О. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Кофта Stone Island підійшла супер. Матеріал щільний, фірмовий патч оригінальний. Дякую магазину за швидку відправку."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Дем'ян Ж. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Купив поло та штани чинос BOSS. Дуже солідно виглядає, тканина преміум якості. Магазину велике дякую, все підійшло."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Юліан Ч. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Все просто супер! Кепка та рюкзак Jordan оригінальної якості, шви бездоганні. Замовлення прийшло дуже швидко."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Никита М. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Спортивний костюм EA7 сів чітко. Якість трикотажу відмінна, фурнітура блищить, бренд оригінал. Магазину велике дякую."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Альберт Д. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Замовив куртку-сорочку Tommy Hilfiger, якість тканини дуже порадувала. Щільна байка, гудзики пришиті міцно. Рекомендую!"</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Едуард Л. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Прекрасний оригінальний товар. Худі Nike підійшло за розміром супер. Швидка відправка та чудовий сервіс магазину."</p>
+            </div>
+            <div class="swiper-slide review-card">
+                <div class="review-stars">★★★★★</div>
+                <div class="review-author">Опанас С. <span class="verified-icon">✓</span></div>
+                <p class="review-text">"Футболка та шорти Stone Island бомба! Матеріал якісний, при пранні не линяє. Замовлятиму тут ще речі, задоволений на всі сто."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="newsletter-banner">
+  <h2 class="newsletter-title">
+    БУДЬТЕ В КУРСІ <br class="mobile-break"> НАШИХ ОСТАННІХ ПРОПОЗИЦІЙ
+  </h2>
+  
+  <form class="newsletter-form" action="#" method="POST">
+    <div class="input-wrapper">
+      <svg class="email-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+      </svg>
+      <input type="email" placeholder="Введіть вашу електронну адресу" required>
+    </div>
+    <button type="submit" class="submit-btn">Підписатися на розсилку</button>
+  </form>
+</div>
+
+
+<div class="footer-container">
+        
+        <div class="footer-brand-column">
+            <div class="footer-logo">Price Drop</div>
+            <p class="footer-about">ЗНАЙДИ ОДЯГ, ЩО ПІДХОДИТЬ ТВОЄМУ СТИЛЮ. Перегляньте наш різноманітний асортимент ретельно створеного одягу.</p>
+            
+<div class="social-icons">
+    <a href="#" class="social-link outline-link x-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a href="#" class="social-link filled-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/price.drop_?igsh=cGFoYTJhbXVodnJw&utm_source=qr" class="social-link outline-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></rect><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    </a>
+    <a href="#" class="social-link outline-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+    </a>
+</div>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>МАГАЗИН</h3>
+            <a href="#">Новинки</a>
+            <a href="#">Розпродаж</a>
+            <a href="#">Бренди</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>СТИЛІ ОДЯГУ</h3>
+            <a href="#">Повсякденний</a>
+            <a href="#">Офіційний</a>
+            <a href="#">Вечірній</a>
+            <a href="#">Спортивний</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>ПОПУЛЯРНІ БРЕНДИ</h3>
+            <a href="#">POLO RALPH</a>
+            <a href="#">NIKE</a>
+            <a href="#">STONE ISLAND</a>
+            <a href="#">JORDAN</a>
+            <a href="#">BOSS</a>
+        </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+        <p class="copyright">Price Drop © 2023-2026, Усі права захищені</p>
+        <div class="payment-methods">
+            <span class="pay-card">Visa</span>
+            <span class="pay-card">MasterCard</span>
+            <span class="pay-card">PayPal</span>
+            <span class="pay-card">ApplePay</span>
+            <span class="pay-card">GooglePay</span>
+        </div>
+    </div>
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const burgerToggle = document.getElementById('burgerToggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    burgerToggle.addEventListener('click', () => {
+        burgerToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+</script>
+<script>
+    const swiper = new Swiper('.products-slider', {
+        slidesPerView: 1,      
+        spaceBetween: 0,      
+        loop: true,          
+        navigation: {
+            nextEl: '.next-arrow',
+            prevEl: '.prev-arrow',
+        },
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const reviewsSwiper = new Swiper('.reviews-slider', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            navigation: {
+                nextEl: '.next-review',
+                prevEl: '.prev-review',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    function toggleBurgerMenu() {
+    const btn = document.querySelector('.burger-btn');
+    const menu = document.getElementById('burgerMenu');
+    
+    btn.classList.toggle('active');
+    menu.classList.toggle('active');
+}
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector(".search-bar input");
+    
+    if (searchInput) {
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                const query = e.target.value.trim();
+                if (query) {
+                    // Змінили catalog.html на твій реальний файл index2.html
+                    window.location.href = `index2.html?search=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* ================= ОРИГІНАЛЬНИЙ HEADER СТИЛЬ ================= */
+
+/* Головний контейнер шапки */
+.main-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #f0f0f0; /* Тонка лінія знизу */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Вирівнювання вмісту в один рядок з відступами */
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Розносить лого, меню та блоки дій по боках */
+}
+
+/* Стилізація Логотипу (PRICE DROP) */
+.logo a {
+    font-size: 22px;
+    font-weight: 900; /* Жирний шрифт як на скріншоті */
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Головне Меню Навігації (По центру) */
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 32px; /* Ідеальний відступ між Магазин, Розпродаж, Новинки */
+    margin: 0;
+    padding: 0;
+}
+
+.main-navigation ul li a {
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+/* Ефект при наведенні на пункти меню */
+.main-navigation ul li a:hover {
+    color: #666666;
+}
+
+/* Блок дій (Пошук + Кошик) праворуч */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Поле пошуку */
+.search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Інпут пошуку (закруглений, сірий дефолтний фон) */
+.search-form input {
+    width: 260px;
+    height: 38px;
+    background-color: #f3f3f3; /* Світло-сірий фон як на фото */
+    border: none;
+    border-radius: 20px; /* Круглі краї */
+    padding: 0 16px 0 40px; /* Великий відступ зліва під лупу */
+    font-size: 14px;
+    color: #000000;
+    outline: none;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* Зміна фону пошуку, коли всередині стоїть курсор */
+.search-form input:focus {
+    background-color: #eaeaea;
+}
+
+/* Плейсхолдер ("Пошук товарів...") */
+.search-form input::placeholder {
+    color: #7a7a7a;
+}
+
+/* Кнопка-лупа всередині інпуту */
+.search-btn {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Іконка кошика */
+.user-menu {
+    display: flex;
+    align-items: center;
+}
+
+.cart-link {
+    font-size: 20px;
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    display: inline-block;
+}
+
+/* Легке збільшення кошика при наведенні мишкою */
+.cart-link:hover {
+    transform: scale(1.08);
+}

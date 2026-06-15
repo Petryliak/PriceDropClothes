@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Drop - Повсякденний одяг</title>
+    <link rel="stylesheet" href="style2.css">
+    <meta property="og:image" content="logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+   <header class="header">
+    <div class="header-container">
+        
+        <div class="logo" id="logoLink">Price Drop</div>
+        
+        <nav class="nav">
+            <a href="index.html" id="shopLink">Головна сторінка</a>
+            <a href="index4.html">Про нас</a>
+            <a href="index3.html">Бренди</a>
+        </nav>
+
+        <div class="search-bar">
+            <span class="search-icon"></span>
+            <input type="text" placeholder="Пошук товарів...">
+        </div>
+
+        <div class="header-icons">
+            <button class="icon-btn" id="cartHeaderBtn">🛒 <span class="cart-badge" id="cartBadge">0</span></button>
+            
+            <div class="burger-menu-wrapper">
+                <button class="burger-btn" onclick="toggleBurgerMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="burger-menu" id="burgerMenu">
+                    <a href="index.html">Головна сторінка</a>
+                    <a href="index4.html">Про нас</a>
+                    <a href="index3.html">Бренди</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</header>
+
+    <div class="breadcrumb">
+        <a href="#" id="breadHome">Головна</a> &gt; <span id="breadCurrent">Повсякденний одяг</span>
+    </div>
+
+    <div id="catalogPage" class="app-page active">
+        <main class="main-container">
+            <button class="mobile-filter-btn" id="openFilters">Фільтри ⚙️</button>
+
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Фільтри</h3>
+                    <button class="close-filter-btn" id="closeFilters">&times;</button>
+                </div>
+                <hr>
+                
+                <div class="filter-section">
+                    <ul class="category-list" id="categoryFilter">
+                        <li data-category="all" class="active">Усі товари <span>&gt;</span></li>
+                        <li data-category="tshirt">Футболки <span>&gt;</span></li>
+                        <li data-category="shorts">Шорти <span>&gt;</span></li>
+                        <li data-category="accessories">Аксесуари <span>&gt;</span></li>
+                        <li data-category="jeans">Джинси <span>&gt;</span></li>
+                        <li data-category="shoes">Взуття <span>&gt;</span></li>
+
+                    </ul>
+                </div>
+                <hr>
+
+                <div class="filter-section">
+                    <h4>Ціна</h4>
+                    <div class="price-slider-container">
+                        <input type="range" id="priceRange" min="50" max="300" value="300" class="slider">
+                        <div class="price-values">
+                            <span id="currentPrice">₴2000</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="filter-section">
+                    <h4>Кольори</h4>
+                    <div class="color-options" id="colorFilter">
+                        <div class="color-circle" data-color="green" style="background: #00c853;"></div>
+                        <div class="color-circle" data-color="red" style="background: #ff1744;"></div>
+                        <div class="color-circle" data-color="yellow" style="background: #ffea00;"></div>
+                        <div class="color-circle" data-color="orange" style="background: #ff9100;"></div>
+                        <div class="color-circle" data-color="lightblue" style="background: #00b0ff;"></div>
+                        <div class="color-circle" data-color="blue" style="background: #2979ff;"></div>
+                        <div class="color-circle" data-color="purple" style="background: #aa00ff;"></div>
+                        <div class="color-circle" data-color="pink" style="background: #ff4081;"></div>
+                        <div class="color-circle" data-color="white" style="background: #ffffff; border: 1px solid #ccc;"></div>
+                        <div class="color-circle" data-color="black" style="background: #000000;"></div>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="filter-section">
+                    <h4>Розмір</h4>
+                    <div class="size-options" id="sizeFilter">
+                        <button class="size-btn" data-size="XXS">XXS</button>
+                        <button class="size-btn" data-size="XS">XS</button>
+                        <button class="size-btn" data-size="S">S</button>
+                        <button class="size-btn" data-size="M">M</button>
+                        <button class="size-btn" data-size="L">L</button>
+                        <button class="size-btn" data-size="XL">XL</button>
+                        <button class="size-btn" data-size="XXL">XXL</button>
+                        <button class="size-btn" data-size="3XL">3XL</button>
+                        <button class="size-btn" data-size="4XL">4XL</button>
+                    </div>
+                </div>
+                <hr>
+
+
+
+                <button class="apply-btn" id="applyFilters">Застосувати</button>
+            </aside>
+
+            <section class="products-content">
+                <div class="products-header">
+                    <h2>Повсякденний одяг</h2>
+                    <div class="products-meta">
+                        <span>Показано 1-9 з 100 товарів</span>
+                        <select class="sort-select">
+                            <option>Найпопулярніші</option>
+                            <option>Спочатку дешевші</option>
+                            <option>Спочатку дорожчі</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="catalogGrid"></div>
+
+                <div class="pagination">
+                    <button class="page-btn text-btn">&larr; Назад</button>
+                    <div class="page-numbers">
+                        <button class="page-btn num-btn active">1</button>
+                        <button class="page-btn num-btn">2</button>
+                        <button class="page-btn num-btn">3</button>
+                        <span>...</span>
+                        <button class="page-btn num-btn">8</button>
+                        <button class="page-btn num-btn">9</button>
+                        <button class="page-btn num-btn">10</button>
+                    </div>
+                    <button class="page-btn text-btn">Вперед &rarr;</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="productPage" class="app-page">
+        <button class="back-to-catalog-btn" onclick="backToCatalog()" style="margin: 20px 0; padding: 10px 20px; background: #000; color: #fff; border: none; cursor: pointer; border-radius: 4px;">
+        &larr; Назад до каталогу
+    </button>
+        <div class="details-container">
+            <div class="details-gallery">
+                <div class="thumbs-col" id="detailThumbs"></div>
+                <div class="main-img-box">
+                    <img id="detailMainImg" src="" alt="Товар">
+                </div>
+            </div>
+            <div class="details-info">
+                <h1 id="detailTitle"></h1>
+                <div class="rating" id="detailRating"></div>
+                <div class="price-container" id="detailPriceContainer"></div>
+                <p class="details-desc">Ця стильна річ ідеально підійде для будь-якого випадку. Виготовлена з м'якої та дихаючої тканини, що забезпечує максимальний комфорт, високу якість та неперевершений вигляд.</p>
+                <hr>
+                <div class="filter-section">
+                    <h4>Оберіть колір</h4>
+                    <div class="color-options" id="detailColors"></div>
+                </div>
+                <hr>
+                <div class="filter-section">
+                    <h4>Оберіть розмір</h4>
+                    <div class="size-options" id="detailSizes"></div>
+                </div>
+                <hr>
+                <div class="qty-and-actions">
+                    <div class="qty-selector">
+                        <button class="qty-btn" id="detailQtyMinus">−</button>
+                        <span class="qty-val" id="detailQtyVal">1</span>
+                        <button class="qty-btn" id="detailQtyPlus">+</button>
+                    </div>
+                    <button class="add-to-cart-btn" id="addToCartBtn">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="cartPage" class="app-page">
+        <div class="cart-container">
+            <h1>Ваш кошик</h1>
+            <div class="cart-layout">
+                <div class="cart-items-list" id="cartItemsList"></div>
+                <div class="order-summary">
+                    <h2>Разом</h2>
+                    <div class="summary-row">
+                        <span>Сума</span>
+                        <span id="summarySubtotal">$0</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Доставка</span>
+                        <span id="summaryDelivery">$0</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Загалом</span>
+                        <span id="summaryTotal">$0</span>
+                    </div>
+                    <div class="promo-container">
+                        <input type="text" class="promo-input" placeholder="Додати промокод">
+                        <button class="promo-btn">Застосувати</button>
+                    </div>
+                    <button class="checkout-btn">Перейти до оформлення &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="checkoutPage" class="app-page">
+    <div class="checkout-container">
+        <button class="checkout-back-btn" id="checkoutBackBtn">&larr; Повернутися до каталогу</button>
+        
+        <div class="checkout-layout">
+            <div class="checkout-form">
+                <div>
+                    <h2 class="checkout-section-title">Оформлення замовлення</h2>
+                    <div class="form-grid">
+                        <input type="text" id="order-name" class="form-input" placeholder="Ім'я">
+                        <input type="text" id="order-lastname" class="form-input" placeholder="Прізвище">
+                        <input type="text" id="order-surname" class="form-input" placeholder="По батькові">
+                        <input type="text" id="order-phone" class="form-input" placeholder="+380">
+                        
+                        <select id="order-messenger" class="form-select">
+                            <option value="Telegram">Telegram</option>
+                            <option value="Viber">Viber</option>
+                        </select>
+                        <input type="text" id="order-nickname" class="form-input" placeholder="Введіть свій @nickname або номер">
+                        
+                        <div class="form-warning">Будь ласка, уважно заповнюйте контактні дані...</div>
+                        
+                        <textarea id="order-comment" class="form-textarea" placeholder="Коментар до замовлення (необов'язково)"></textarea>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="checkout-section-title">Доставка</h2>
+                    <div class="form-grid">
+                        <input type="text" id="order-city" class="form-input" placeholder="Місто">
+                        <input type="text" id="order-post" class="form-input" placeholder="Відділення Нової Пошти">
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="checkout-section-title">Спосіб оплати</h2>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="paymentMethod" value="Передоплата">
+                            <span>Передоплата</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="paymentMethod" value="Оплата при отриманні" checked>
+                            <span>Оплата при отриманні</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checkout-summary-box">
+                <h2 id="checkoutSummaryTitle">Ваші покупки</h2>
+                
+                <div class="checkout-mini-items" id="checkoutMiniItems"></div>
+                
+                <hr class="checkout-divider">
+                <div class="checkout-row">
+                    <span>Доставка</span>
+                    <span style="color: #666; font-size: 14px;">За тарифами перевізника</span>
+                </div>
+                
+                <div class="checkout-row total">
+                    <span>Разом</span>
+                    <span id="checkoutTotalVal">0.00 грн</span>
+                </div>
+                
+                <label class="checkbox-label">
+                    <input type="checkbox" id="order-agree" checked>
+                    <span>Я погоджуюсь з <a href="#">Політикою конфіденційності</a></span>
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" id="order-nocall" checked>
+                    <span>Я не потребую дзвінка менеджера</span>
+                </label>
+                
+                <button type="button" class="submit-order-btn" id="submitOrderBtn">Оформити замовлення</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+const baseProducts = [
+    { title: "Штани Лляні", category: "pants", price: 850, oldPrice: null, rating: 4.5, stars: "★★★★☆", colors: ["black", "white", "darkblue", "beige"], sizes: ["S", "M", "L", "XL"], style: "casual", img: "1/1.jpg", gallery: ["1/1.jpg", "1/2.jpg", "1/3.jpg", "1/4.jpg"] },
+    { title: "Шорти Nike Alumni", category: "shorts", price: 950, oldPrice: null, rating: 4.0, stars: "★★★★☆", colors: ["black", "grey"], sizes: ["S", "M", "L", "XL"], style: "casual", img: "2/1.jpg", gallery: ["2/2.jpg", "2/3.jpg", "2/6.jpg", "2/5.jpg"] },
+    { title: "Шорти Polo Ralph Lauren", category: "shorts", price: 980, oldPrice: null, rating: 4.5, stars: "★★★★☆", colors: ["blue", "black"], sizes: ["M", "L", "XL"], style: "gym", img: "3/1.jpg", gallery: ["3/1.jpg", "3/2.jpg", "3/3.jpg"] },
+    { title: "Шорти Jordan Fleece", category: "shorts", price: 950, oldPrice: null, rating: 4.8, stars: "★★★★★", colors: ["grey", "black"], sizes: ["S", "M", "L", "XL"], style: "casual", img: "4/1.jpg", gallery: ["4/1.jpg", "4/2.jpg", "4/3.jpg"] },
+    { title: "Шорти Карго CP Company", category: "shorts", price: 1250, oldPrice: null, rating: 4.6, stars: "★★★★☆", colors: ["grey", "Black"], sizes: ["S", "M", "L"], style: "casual", img: "5/1.jpg", gallery: ["5/1.jpg", "5/2.jpg", "5/3.jpg"] },
+    { title: "Кепка Hugo", category: "accessories", price: 550, oldPrice: null, rating: 4.3, stars: "★★★★☆", colors: ["darkblue", "black"], sizes: ["One Size"], style: "casual", img: "6/1.jpg", gallery: ["6/1.jpg", "6/2.jpg", "6/3.jpg"] },
+    { title: "Кепка Polo Ralph Lauren", category: "accessories", price: 550, oldPrice: null, rating: 4.4, stars: "★★★★☆", colors: ["darkblue", "white", "black"], sizes: ["One Size"], style: "casual", img: "7/1.jpg", gallery: ["7/1.jpg", "7/2.jpg", "7/3.jpg"] },
+    { title: "Футболка Nike Nocta", category: "tshirt", price: 850, oldPrice: null, rating: 4.9, stars: "★★★★★", colors: ["black", "white"], sizes: ["S", "M", "L", "XL"], style: "streetwear", img: "8/1.jpg", gallery: ["8/1.jpg", "8/2.jpg", "8/3.jpg"] },
+    { title: "Футболка Coach", category: "tshirt", price: 850, oldPrice: null, rating: 4.1, stars: "★★★★☆", colors: ["black", "white"], sizes: ["S", "M", "L"], style: "casual", img: "9/1.jpg", gallery: ["9/1.jpg", "9/2.jpg", "9/3.jpg"] },
+    { title: "Футболка Jordan OFF White", category: "tshirt", price: 850, oldPrice: null, rating: 4.7, stars: "★★★★★", colors: ["black", "white"], sizes: ["S", "M", "L", "XL"], style: "gym", img: "10/1.jpg", gallery: ["10/1.jpg", "10/2.jpg", "10/3.jpg"] },
+
+    { title: "Футболка Jordan Paris", category: "tshirt", price: 850, oldPrice: null, rating: 4.0, stars: "★★★★☆", colors: ["whites", "black"], sizes: ["S", "M", "L"], style: "casual", img: "11/1.jpg", gallery: ["11/1.jpg", "11/2.jpg", "11/3.jpg"] },
+    { title: "Футболка Jordan AIR", category: "tshirt", price: 850, oldPrice: null, rating: 4.0, stars: "★★★★☆", colors: ["white", "black"], sizes: ["S", "M", "L", "XL"], style: "formal", img: "12/1.jpg", gallery: ["12/1.jpg", "12/2.jpg", "12/3.jpg"] },
+    { title: "Футболка Jordan Flight", category: "tshirt", price: 850, oldPrice: null, rating: 4.7, stars: "★★★★★", colors: ["black", "white"], sizes: ["S", "M", "L", "XL"], style: "casual", img: "13/1.jpg", gallery: ["13/1.jpg", "13/2.jpg", "13/3.jpg"] },
+    { title: "Футболка Jodan AIR", category: "tshirt", price: 850, oldPrice: null, rating: 4.5, stars: "★★★★☆", colors: ["white", "black"], sizes: ["S", "M", "L", "XL"], style: "streetwear", img: "14/1.jpg", gallery: ["14/1.jpg", "14/2.jpg", "14/3.jpg"] },
+    { title: "Штани Jordan Dri Fit", category: "shorts", price: 850, oldPrice: null, rating: 4.3, stars: "★★★★☆", colors: ["black", "blue"], sizes: ["S", "M", "L", "XL"], style: "casual", img: "15/1.jpg", gallery: ["15/1.jpg", "15/2.jpg", "15/3.jpg"] },
+    { title: "Шорти Nike Swoosh", category: "shorts", price: 950, oldPrice: null, rating: 4.9, stars: "★★★★★", colors: ["gray", "black"], sizes: ["S", "M", "L", "XL"], style: "casual", img: "16/1.jpg", gallery: ["16/1.jpg", "16/2.jpg", "16/3.jpg"] },
+    { title: "Штани Stone Island карго брюки", category: "jeans", price: 1500, oldPrice: 2300, rating: 4.2, stars: "★★★★☆", colors: ["beige", "grey"], sizes: ["S", "M", "L"], style: "streetwear", img: "17/1.jpg", gallery: ["17/1.jpg", "17/2.jpg"] },
+    { title: "Лофери чоловічі", category: "shoes", price: 1450, oldPrice: null, rating: 4.4, stars: "★★★★☆", colors: ["black"], sizes: ["41", "42", "43", "44", "45"], style: "casual", img: "18/1.jpg", gallery: ["18/1.jpg", "18/2.jpg", "18/3.jpg"] },
+    { title: "Шорти CP Company", category: "shorts", price: 1200, oldPrice: 1700, rating: 4.6, stars: "★★★★☆", colors: ["grey", "black", "darkgreen"], sizes: ["M", "L", "XL"], style: "streetwear", img: "19/1.jpg", gallery: ["19/1.jpg", "19/2.jpg", "19/3.jpg", "19/4.jpg"] },
+    { title: "Кросівки Nike Ava Rover", category: "shoes", price: 2700, oldPrice: 3550, rating: 4.4, stars: "★★★★☆", colors: ["black"], sizes: ["41", "42", "43", "44", "45"], style: "formal", img: "20/1.jpg", gallery: ["20/1.jpg", "20/2.jpg", "20/3.jpg"] },
+
+    { title: "Тапки Crocs", category: "shoes", price: 1250, oldPrice: 1500, rating: 5.0, stars: "★★★★★", colors: ["white", "black", "darkgreen"], sizes: ["41", "42", "43", "44", "45"], style: "casual", img: "21/1.jpg", gallery: ["21/1.jpg", "21/2.jpg", "21/3.jpg"] },
+    { title: "Кросівки EA7", category: "shoes", price: 2890, oldPrice: null, rating: 4.9, stars: "★★★★★", colors: ["black"], sizes: ["41", "42", "43", "44", "45"], style: "casual", img: "22/1.jpg", gallery: ["22/1.jpg", "22/2.jpg", "22/3.jpg"] },
+    { title: "Crocs Batman", category: "shoes", price: 1600, oldPrice: 1800, rating: 4.8, stars: "★★★★★", colors: ["black"], sizes: ["41", "42", "43", "44"], style: "streetwear", img: "23/1.jpg", gallery: ["23/1.jpg", "23/2.jpg", "23/3.jpg"] },
+    { title: "Футболка AX", category: "tshirt", price: 1350, oldPrice: 1600, rating: 4.7, stars: "★★★★★", colors: ["black"], sizes: ["S", "M", "L", "Xl"], style: "casual", img: "24/1.jpg", gallery: ["24/1.jpg", "24/2.jpg", "24/3.jpg"] },
+    { title: "Футболка Hugo Boss", category: "tshirt", price: 1200, oldPrice: null, rating: 4.6, stars: "★★★★☆", colors: ["black"], sizes: ["S", "M", "L", "XL"], style: "gym", img: "25/1.jpg", gallery: ["25/1.jpg", "25/2.jpg", "25/3.jpg"] },
+    { title: "Кросівки Premiata Lander 7079", category: "shoes", price: 4100, oldPrice: 4500, rating: 4.5, stars: "★★★★☆", colors: ["black"], sizes: ["41", "42", "43", "45"], style: "casual", img: "26/1.jpg", gallery: ["26/1.jpg", "26/2.jpg", "26/3.jpg"] },
+    { title: "Футболка Stone Island", category: "tshirt", price: 1400, oldPrice: 2300, rating: 4.4, stars: "★★★★☆", colors: ["black", "white"], sizes: ["S", "M", "L", "Xl"], style: "streetwear", img: "27/1.jpg", gallery: ["27/1.jpg", "27/2.jpg", "27/3.jpg"] },
+    { title: "Футболка Hugo", category: "tshirt", price: 1200, oldPrice: null, rating: 4.7, stars: "★★★★★", colors: ["black"], sizes: ["S", "M", "L", "Xl"], style: "casual", img: "28/1.jpg", gallery: ["28/1.jpg", "28/2.jpg"] },
+    { title: "Худі Stone Island", category: "hoodie", price: 1290, oldPrice: null, rating: 4.9, stars: "★★★★★", colors: ["darkgreen", "black", "green"], sizes: ["S", "M", "L", "Xl"], style: "streetwear", img: "29/1.jpg", gallery: ["29/1.jpg", "29/2.jpg", "29/3.jpg"] },
+    { title: "Футболка Polo Ralph Lauren", category: "tshirt", price: 750, oldPrice: null, rating: 4.8, stars: "★★★★★", colors: ["blue", "white", "darkblue"], sizes: ["S", "M", "L", "Xl"], style: "gym", img: "30/1.jpg", gallery: ["30/1.jpg", "30/2.jpg", "30/3.jpg"] },
+    { title: "Джинсові шорти", category: "shorts", price: 1500, oldPrice: 1800, rating: 4.6, stars: "★★★★☆", colors: ["black", "white"], sizes: ["29", "30", "31", "32", "33", "34", "35", "36"], style: "gym", img: "31/1.jpg", gallery: ["31/1.jpg", "31/2.jpg", "31/3.jpg"] },
+    { title: "Джинси МОМ", category: "jeans", price: 1500, oldPrice: null, rating: 4.5, stars: "★★★★☆", colors: ["gray"], sizes: ["29", "30", "31", "32", "33", "34", "35", "36"], style: "casual", img: "32/1.jpg", gallery: ["32/1.jpg", "32/2.jpg"] },
+    { title: "Джинси МОМ", category: "jeans", price: 1650, oldPrice: 1950, rating: 4.4, stars: "★★★★☆", colors: ["lightblue"], sizes: ["29", "30", "31", "32", "33", "34", "35", "36"], style: "casual", img: "33/1.jpg", gallery: ["33/1.jpg", "33/2.jpg", "33/3.jpg"] },
+    { title: "Джинси МОМ", category: "jeans", price: 1650, oldPrice: 1900, rating: 4.9, stars: "★★★★★", colors: ["black"], sizes: ["29", "30", "31", "32", "33", "34", "35", "36"], style: "gym", img: "34/1.jpg", gallery: ["34/1.jpg", "34/2.jpg", "34/3.jpg"] },
+    { title: "Джинси МОМ", category: "jeans", price: 1500, oldPrice: null, rating: 4.7, stars: "★★★★★", colors: ["white"], sizes: ["29", "30", "31", "32", "33", "34", "35", "36"], style: "formal", img: "35/1.jpg", gallery: ["35/1.jpg", "35/2.jpg", "35/3.jpg"] },
+    { title: "Джинси балон", category: "jeans", price: 1550, oldPrice: null, rating: 4.6, stars: "★★★★☆", colors: ["black"], sizes: ["29", "30", "31", "32", "33", "34", "35", "36"], style: "casual", img: "36/1.jpg", gallery: ["36/1.jpg", "36/2.jpg", "36/3.jpg"] },
+];
+
+const productsData = baseProducts.map((product, index) => ({
+    ...product,
+    id: index + 1
+}));
+
+let cart = [];
+let currentSelectedProduct = null;
+let detailQty = 1;
+
+let currentPage = 1;
+const itemsPerPage = 9; 
+let filteredProducts = [...productsData];
+let searchQuery = ""; 
+
+const colorHexMap = {
+    green: "#00c853", red: "#ff1744", yellow: "#ffea00", orange: "#ff9100",
+    lightblue: "#00b0ff", blue: "#2979ff", purple: "#aa00ff", pink: "#ff4081",
+    white: "#ffffff", black: "#000000", beige: "#f5f5dc", brown: "#8b4513",
+    gray: "#808080", khaki: "#c3b091", olive: "#808000", navy: "#000080", silver: "#c0c0c0", ash: "#b2beb5"
+};
+
+
+function renderCatalog() {
+    const grid = document.getElementById('catalogGrid');
+    if(!grid) return;
+    grid.innerHTML = '';
+
+    const startIndex = searchQuery ? 0 : (currentPage - 1) * itemsPerPage;
+    const endIndex = searchQuery ? filteredProducts.length : startIndex + itemsPerPage;
+    const pageProducts = filteredProducts.slice(startIndex, endIndex);
+
+    const metaSpan = document.querySelector('.products-meta span');
+    if (metaSpan && window.getComputedStyle(metaSpan).display !== 'none') {
+        const total = filteredProducts.length;
+        metaSpan.textContent = total > 0 ? `Знайдено ${total} товарів` : "Товарів не знайдено";
+    }
+
+    if (pageProducts.length === 0) {
+        grid.innerHTML = '<div class="no-results" style="padding: 40px; text-align: center; width: 100%; font-size: 18px; color: #555;">Нічого не знайдено за вашим запитом</div>';
+        renderPaginationControls(true); 
+        return;
+    }
+
+    pageProducts.forEach(p => {
+        const card = document.createElement('div');
+        card.className = 'product-card';
+        card.onclick = () => openProductDetails(p.id);
+
+        let priceHtml = `<span class="current-price">${p.price.toFixed(2)} грн</span>`;
+        if(p.oldPrice) {
+            const disc = Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100);
+            if (disc > 0) {
+                priceHtml += `<span class="old-price">${p.oldPrice.toFixed(2)} грн</span><span class="discount">-${disc}%</span>`;
+            }
+        }
+
+        card.innerHTML = `
+            <div class="img-container"><img src="${p.img}" alt="${p.title}"></div>
+            <h3>${p.title}</h3>
+            <div class="rating" style="color: #ffc107; font-size: 14px; letter-spacing: 1px;">${p.stars} <span style="color: #777; font-size: 12px;">${p.rating.toFixed(1)}/5</span></div>
+            <div class="price-container">${priceHtml}</div>
+        `;
+        grid.appendChild(card);
+    });
+
+    renderPaginationControls(searchQuery !== ""); 
+}
+
+function renderPaginationControls(hidePagination = false) {
+    const paginationContainer = document.querySelector('.pagination');
+    if (!paginationContainer) return;
+
+    if (hidePagination) {
+        paginationContainer.innerHTML = '';
+        return;
+    }
+
+    const totalPages = Math.ceil(filteredProducts.length / itemsPerPage) || 1;
+    let numbersHtml = '';
+    for (let i = 1; i <= totalPages; i++) {
+        numbersHtml += `<button class="page-btn num-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i})">${i}</button>`;
+    }
+
+    paginationContainer.innerHTML = `
+        <button class="page-btn text-btn" id="prevPageBtn" ${currentPage === 1 ? 'disabled style="opacity: 0.5; cursor: not-allowed;"' : ''}>&larr; Назад</button>
+        <div class="page-numbers">
+            ${numbersHtml}
+        </div>
+        <button class="page-btn text-btn" id="nextPageBtn" ${currentPage === totalPages ? 'disabled style="opacity: 0.5; cursor: not-allowed;"' : ''}>Вперед &rarr;</button>
+    `;
+
+    document.getElementById('prevPageBtn').onclick = () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderCatalog();
+            window.scrollTo(0, 0);
+        }
+    };
+
+    document.getElementById('nextPageBtn').onclick = () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderCatalog();
+            window.scrollTo(0, 0);
+        }
+    };
+}
+
+window.goToPage = function(pageNumber) {
+    currentPage = pageNumber;
+    renderCatalog();
+    window.scrollTo(0, 0);
+};
+
+function applySorting() {
+    const sortSelect = document.querySelector('.products-meta select') || document.querySelector('.sort-select');
+    if (!sortSelect) return;
+
+    const sortValue = sortSelect.value;
+
+    if (sortValue === "cheap" || sortValue.toLowerCase().includes("дешев") || sortValue === "price-asc") {
+        filteredProducts.sort((a, b) => a.price - b.price);
+    } else if (sortValue === "expensive" || sortValue.toLowerCase().includes("дорож") || sortValue === "price-desc") {
+        filteredProducts.sort((a, b) => b.price - a.price);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector(".search-bar input");
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const searchQueryFromUrl = urlParams.get('search');
+    
+    if (searchQueryFromUrl) {
+        searchQuery = searchQueryFromUrl.toLowerCase().trim();
+        if (searchInput) searchInput.value = searchQueryFromUrl; 
+        executeFiltering(); 
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            executeFiltering();
+        });
+    }
+});
+
+function executeFiltering() {
+    const priceRangeInput = document.getElementById('priceRange');
+    const maxPrice = priceRangeInput ? parseInt(priceRangeInput.value) : 2000;
+    
+    const activeCategoryEl = document.querySelector('#categoryFilter li.active');
+    const selectedCategory = activeCategoryEl ? activeCategoryEl.getAttribute('data-category') : 'all';
+    
+    const activeStyleEl = document.querySelector('#styleFilter li.active');
+    const selectedStyle = activeStyleEl ? activeStyleEl.getAttribute('data-style') : 'all';
+    
+    const activeColorEl = document.querySelector('#colorFilter .color-circle.active');
+    const selectedColor = activeColorEl ? activeColorEl.getAttribute('data-color') : null;
+    
+    const activeSizeEl = document.querySelector('#sizeFilter .size-btn.active');
+    const selectedSize = activeSizeEl ? activeSizeEl.getAttribute('data-size') : null;
+
+    filteredProducts = productsData.filter(p => {
+        const matchPrice = p.price <= maxPrice;
+        const matchCategory = (selectedCategory === 'all' || p.category === selectedCategory);
+        const matchStyle = (selectedStyle === 'all' || p.style === selectedStyle);
+        const matchColor = (!selectedColor || p.colors.includes(selectedColor));
+        const matchSize = (!selectedSize || p.sizes.includes(selectedSize));
+        const matchSearch = !searchQuery || p.title.toLowerCase().includes(searchQuery);
+        
+        return matchPrice && matchCategory && matchStyle && matchColor && matchSize && matchSearch;
+    });
+
+    currentPage = 1;
+    applySorting();
+    renderCatalog();
+}
+
+const sortSelectElement = document.querySelector('.products-meta select') || document.querySelector('.sort-select');
+if (sortSelectElement) {
+    sortSelectElement.addEventListener('change', function() {
+        currentPage = 1;
+        applySorting();
+        renderCatalog();
+    });
+}
+
+function navigateTo(pageId) {
+    document.querySelectorAll('.app-page').forEach(page => page.classList.remove('active'));
+    const targetPage = document.getElementById(pageId);
+    if(targetPage) {
+        targetPage.classList.add('active');
+    }
+    window.scrollTo(0,0);
+    if(pageId === 'catalogPage') {
+        document.getElementById('breadCurrent').textContent = "Каталог товарів";
+    }
+}
+
+function openProductDetails(productId) {
+    const p = productsData.find(item => item.id === productId);
+    if(!p) return;
+    currentSelectedProduct = p;
+    detailQty = 1;
+    document.getElementById('detailQtyVal').textContent = detailQty;
+
+    document.getElementById('breadCurrent').textContent = p.title;
+    document.getElementById('detailTitle').textContent = p.title;
+    document.getElementById('detailRating').innerHTML = `<span style="color: #ffc107;">${p.stars}</span> <span>${p.rating.toFixed(1)}/5</span>`;
+    
+    let priceHtml = `<span class="current-price">${p.price.toFixed(2)} грн</span>`;
+    if(p.oldPrice) {
+        const disc = Math.round(((p.oldPrice - p.price) / p.oldPrice) * 100);
+        if (disc > 0) {
+            priceHtml += `<span class="old-price">${p.oldPrice.toFixed(2)} грн</span><span class="discount">-${disc}%</span>`;
+        }
+    }
+    document.getElementById('detailPriceContainer').innerHTML = priceHtml;
+    document.getElementById('detailMainImg').src = p.img;
+
+    let allProductImages = [];
+    if (p.img) {
+        allProductImages.push(p.img);
+    }
+    if (p.gallery && Array.isArray(p.gallery)) {
+        allProductImages = allProductImages.concat(p.gallery);
+    }
+
+    const thumbsCol = document.getElementById('detailThumbs');
+    thumbsCol.innerHTML = '';
+    
+    const uniqueImages = [...new Set(allProductImages)];
+
+    uniqueImages.forEach((imagePath, index) => {
+        const thumb = document.createElement('div');
+        thumb.className = `thumb-box ${index === 0 ? 'active' : ''}`;
+        thumb.innerHTML = `<img src="${imagePath}" alt="Галерея">`;
+        
+        thumb.onclick = function() {
+            document.querySelectorAll('.thumb-box').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            document.getElementById('detailMainImg').src = imagePath; 
+        };
+        thumbsCol.appendChild(thumb);
+    });
+
+    const colorsDiv = document.getElementById('detailColors');
+    colorsDiv.innerHTML = '';
+    p.colors.forEach((color, index) => {
+        const circle = document.createElement('div');
+        circle.className = `color-circle ${index===0?'active':''}`;
+        circle.setAttribute('data-color-name', color);
+        circle.style.background = colorHexMap[color] || color;
+        if(color === 'white') circle.style.border = "1px solid #ccc";
+        circle.onclick = function() {
+            colorsDiv.querySelectorAll('.color-circle').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        };
+        colorsDiv.appendChild(circle);
+    });
+
+    const sizesDiv = document.getElementById('detailSizes');
+    sizesDiv.innerHTML = '';
+    p.sizes.forEach((size, index) => {
+        const btn = document.createElement('button');
+        btn.className = `size-btn ${index===0?'active':''}`;
+        btn.textContent = size;
+        btn.onclick = function() {
+            sizesDiv.querySelectorAll('.size-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        };
+        sizesDiv.appendChild(btn);
+    });
+
+    navigateTo('productPage');
+}
+
+document.getElementById('detailQtyMinus').onclick = () => {
+    if(detailQty > 1) {
+        detailQty--;
+        document.getElementById('detailQtyVal').textContent = detailQty;
+    }
+};
+document.getElementById('detailQtyPlus').onclick = () => {
+    detailQty++;
+    document.getElementById('detailQtyVal').textContent = detailQty;
+};
+
+document.getElementById('addToCartBtn').onclick = () => {
+    if(!currentSelectedProduct) return;
+    
+    const activeColorEl = document.querySelector('#detailColors .color-circle.active');
+    const activeSizeEl = document.querySelector('#detailSizes .size-btn.active');
+    
+    const selectedColor = activeColorEl ? activeColorEl.getAttribute('data-color-name') : 'Стандарт';
+    const selectedSize = activeSizeEl ? activeSizeEl.textContent : 'M';
+
+    const existingIndex = cart.findIndex(item => item.id === currentSelectedProduct.id && item.color === selectedColor && item.size === selectedSize);
+    
+    if(existingIndex > -1) {
+        cart[existingIndex].qty += detailQty;
+    } else {
+        cart.push({
+            id: currentSelectedProduct.id,
+            title: currentSelectedProduct.title,
+            price: currentSelectedProduct.price,
+            img: currentSelectedProduct.img,
+            color: selectedColor,
+            size: selectedSize,
+            qty: detailQty
+        });
+    }
+    updateCartBadge();
+    navigateTo('cartPage');
+    renderCart();
+};
+
+function updateCartBadge() {
+    const badge = document.getElementById('cartBadge');
+    const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+    if(totalItems > 0) {
+        badge.textContent = totalItems;
+        badge.style.display = 'block';
+    } else {
+        badge.style.display = 'none';
+    }
+}
+
+function renderCart() {
+    const listContainer = document.getElementById('cartItemsList');
+    listContainer.innerHTML = '';
+
+    if(cart.length === 0) {
+        listContainer.innerHTML = '<p style="text-align:center; padding: 20px; color:#777;">Кошик порожній</p>';
+        calculateSummary(0);
+        return;
+    }
+
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+        subtotal += item.price * item.qty;
+        const itemRow = document.createElement('div');
+        itemRow.className = 'cart-item';
+
+        itemRow.innerHTML = `
+            <div class="cart-item-img"><img src="${item.img}" alt="${item.title}"></div>
+            <div class="cart-item-details">
+                <div>
+                    <h3>${item.title}</h3>
+                    <div class="cart-item-meta">Розмір: ${item.size}</div>
+                    <div class="cart-item-meta">Колір: ${item.color}</div>
+                </div>
+                <div class="cart-item-price">${item.price.toFixed(2)} грн</div>
+            </div>
+            <button class="remove-item-btn" onclick="removeCartItem(${index})">🗑</button>
+            <div class="qty-selector">
+                <button class="qty-btn" onclick="changeCartQty(${index}, -1)">−</button>
+                <span class="qty-val">${item.qty}</span>
+                <button class="qty-btn" onclick="changeCartQty(${index}, 1)">+</button>
+            </div>
+        `;
+        listContainer.appendChild(itemRow);
+    });
+
+    calculateSummary(subtotal);
+}
+
+function changeCartQty(index, change) {
+    cart[index].qty += change;
+    if(cart[index].qty <= 0) {
+        cart.splice(index, 1);
+    }
+    updateCartBadge();
+    renderCart();
+}
+
+function removeCartItem(index) {
+    cart.splice(index, 1);
+    updateCartBadge();
+    renderCart();
+}
+
+function calculateSummary(subtotal) {
+    const total = subtotal; 
+
+    document.getElementById('summarySubtotal').textContent = `${subtotal.toFixed(2)} грн`;
+    
+    if (document.getElementById('summaryDiscount')) {
+        document.getElementById('summaryDiscount').textContent = `0.00 грн`;
+    }
+    
+    const deliveryEl = document.getElementById('summaryDelivery');
+    if (deliveryEl) {
+        deliveryEl.textContent = subtotal > 0 ? `За тарифами перевізника` : `0.00 грн`;
+    }
+    
+    document.getElementById('summaryTotal').textContent = `${total.toFixed(2)} грн`;
+}
+document.querySelector('.checkout-btn').onclick = function() {
+    if(cart.length === 0) {
+        alert('Ваш кошик порожній!');
+        return;
+    }
+    navigateTo('checkoutPage');
+    renderCheckoutSummary();
+};
+
+function renderCheckoutSummary() {
+    const miniItemsContainer = document.getElementById('checkoutMiniItems');
+    if (!miniItemsContainer) return;
+    
+    miniItemsContainer.innerHTML = '';
+    let totalItemsCount = 0;
+    let subtotal = 0;
+
+    cart.forEach(item => {
+        totalItemsCount += item.qty;
+        subtotal += item.price * item.qty;
+
+        const miniRow = document.createElement('div');
+        miniRow.className = 'mini-item';
+        miniRow.innerHTML = `
+            <div class="mini-item-img">
+                <img src="${item.img}" alt="${item.title}">
+            </div>
+            <div class="mini-item-info">
+                <h4>${item.title.toUpperCase()}</h4>
+                <div class="mini-item-meta">Розмір: ${item.size}</div>
+                <div class="mini-item-meta">Колір: ${item.color}</div>
+                <div class="mini-item-meta">Кількість: ${item.qty}</div>
+                <div class="mini-item-price">${(item.price * item.qty).toFixed(2)} грн</div>
+            </div>
+        `;
+        miniItemsContainer.appendChild(miniRow);
+    });
+
+    const checkoutTotal = subtotal; 
+
+    document.getElementById('checkoutSummaryTitle').textContent = `Ваші покупки (${totalItemsCount})`;
+    document.getElementById('checkoutTotalVal').textContent = `${checkoutTotal.toFixed(2)} грн`;
+}
+
+document.getElementById('submitOrderBtn').onclick = () => {
+    
+    const TELEGRAM_BOT_TOKEN = '8661439591:AAFi-Rre1BqHQxpiJybsyWS0O9O989WZ43U';
+    const TELEGRAM_CHAT_ID = '1374528287';
+
+    const name = document.getElementById('order-name')?.value || 'Не вказано';
+    const lastname = document.getElementById('order-lastname')?.value || '';
+    const phone = document.getElementById('order-phone')?.value || 'Не вказано';
+    const city = document.getElementById('order-city')?.value || 'Не вказано';
+    const post = document.getElementById('order-post')?.value || 'Не вказано';
+    const comment = document.getElementById('order-comment')?.value || '-';
+
+    let payment = 'Не вказано';
+
+    const radioPayment = document.querySelector('input[name="payment"]:checked') || 
+                          document.querySelector('input[name="payment-method"]:checked') ||
+                          document.querySelector('input[type="radio"]:checked');
+    
+    if (radioPayment) {
+        payment = radioPayment.value;
+    } else {
+        const activePaymentBlock = document.querySelector('.payment-method.active') || 
+                                   document.querySelector('.payment-btn.active') || 
+                                   document.querySelector('.active[data-payment]') ||
+                                   document.querySelector('.checkout-form .active');
+        
+        if (activePaymentBlock) {
+            payment = activePaymentBlock.innerText || activePaymentBlock.textContent;
+            payment = payment.replace(/[\n\r\t]/g, "").trim();
+        }
+    }
+
+    let text = `🛍️ <b>НОВЕ ЗАМОВЛЕННЯ З САЙТУ!</b>\n\n`;
+    text += `👤 <b>Клієнт:</b> ${lastname} ${name}\n`;
+    text += `📞 <b>Телефон:</b> ${phone}\n`;
+    text += `📍 <b>Доставка:</b> м. ${city}, ${post}\n`;
+    text += `💳 <b>Оплата:</b> ${payment}\n`;
+    if (comment !== '-') text += `📝 <b>Коментар:</b> ${comment}\n`;
+    
+    text += `\n📦 <b>ТОВАРИ В ЗАМОВЛЕННІ:</b>\n`;
+    
+    cart.forEach((item, index) => {
+        text += `${index + 1}. <b>${item.title}</b>\n`;
+        text += `   🏷️ Колір: ${item.color || 'Не обрано'}\n`;
+        text += `   📐 Розмір: ${item.size || 'Не обрано'}\n`;
+        text += `   🔢 Кількість: ${item.qty} шт. — ${(item.price * item.qty)} грн\n\n`;
+    });
+    
+    let subtotal = 0;
+    cart.forEach(item => { subtotal += item.price * item.qty; });
+    
+    // Чиста математика без знижок і фіксованої доставки
+    const total = subtotal; 
+
+    text += `🚚 <b>Доставка:</b> За тарифами перевізника\n`;
+    text += `💰 <b>ЗАГАЛЬНА СУМА до сплати: ${total.toFixed(2)} грн</b>`;
+
+    let photoUrl = cart.length > 0 ? cart[0].img : "";
+    const isLocalFile = window.location.protocol === 'file:';
+    let method = "sendMessage";
+    let bodyData = { chat_id: TELEGRAM_CHAT_ID, parse_mode: 'html' };
+
+    if (photoUrl && !isLocalFile) {
+        method = "sendPhoto";
+        if (!photoUrl.startsWith('http')) {
+            photoUrl = window.location.origin + '/' + photoUrl;
+        }
+        bodyData.photo = photoUrl;
+        bodyData.caption = text;
+    } else {
+        bodyData.text = text;
+    }
+
+    const URI_API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/${method}`;
+
+    fetch(URI_API, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(bodyData)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Замовлення успішно оформлено! Дякуємо за покупку.');
+        } else {
+            alert('Помилка відправки в Telegram. Перевірте вашого бота.');
+        }
+        cart = [];
+        updateCartBadge();
+        navigateTo('catalogPage');
+    })
+    .catch(error => {
+        console.error("Помилка:", error);
+        alert('Помилка зв\'язку з сервером, але замовлення зафіксовано.');
+        cart = [];
+        updateCartBadge();
+        navigateTo('catalogPage');
+    });
+}; // Тут закривається кнопка натискання
+
+const priceRangeInput = document.getElementById('priceRange');
+if (priceRangeInput) {
+    priceRangeInput.min = "200";
+    priceRangeInput.max = "5500"; 
+    priceRangeInput.value = "5500";
+    
+    const currentPriceEl = document.getElementById('currentPrice');
+    if (currentPriceEl) {
+        currentPriceEl.textContent = parseInt(priceRangeInput.value).toFixed(2) + ' грн';
+    }
+
+    priceRangeInput.addEventListener('input', function(e) {
+        if (currentPriceEl) {
+            currentPriceEl.textContent = parseInt(e.target.value).toFixed(2) + ' грн';
+        }
+    });
+}
+
+document.querySelectorAll('#categoryFilter li').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelectorAll('#categoryFilter li').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+document.querySelectorAll('#styleFilter li').forEach(item => {
+    item.addEventListener('click', function() {
+        document.querySelectorAll('#styleFilter li').forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+    });
+});
+
+document.querySelectorAll('#colorFilter .color-circle').forEach(circle => {
+    circle.addEventListener('click', function() {
+        if(this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else {
+            document.querySelectorAll('#colorFilter .color-circle').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        }
+    });
+});
+
+document.querySelectorAll('#sizeFilter .size-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        if(this.classList.contains('active')) {
+            this.classList.remove('active');
+        } else {
+            document.querySelectorAll('#sizeFilter .size-btn').forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+        }
+    });
+});
+
+document.getElementById('applyFilters').addEventListener('click', executeFiltering);
+
+const openBtn = document.getElementById('openFilters');
+const closeBtn = document.getElementById('closeFilters');
+const sidebar = document.getElementById('sidebar');
+
+if(openBtn && closeBtn && sidebar) {
+    openBtn.addEventListener('click', () => sidebar.classList.add('open'));
+    closeBtn.addEventListener('click', () => sidebar.classList.remove('open'));
+}
+
+document.getElementById('logoLink').onclick = () => navigateTo('catalogPage');
+document.getElementById('shopLink').onclick = () => navigateTo('catalogPage');
+document.getElementById('breadHome').onclick = () => navigateTo('catalogPage');
+document.getElementById('cartHeaderBtn').onclick = () => {
+    navigateTo('cartPage');
+    renderCart();
+};
+
+function toggleBurgerMenu() {
+    const btn = document.querySelector('.burger-btn');
+    const menu = document.getElementById('burgerMenu');
+    if(btn && menu) {
+        btn.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+}
+
+applySorting();
+renderCatalog();
+</script>
+
+<script>
+    function backToCatalog() {
+    document.getElementById('productPage').classList.remove('active');
+    document.getElementById('catalogPage').classList.add('active');
+    window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>

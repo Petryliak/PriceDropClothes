@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Drop — Знайди свій стиль</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<meta property="og:image" content="logo.png">
+<link rel="icon" type="image/png" href="logo.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Impact&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,800;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Price Drop</div>
+        
+        <nav class="nav-links">
+            <a href="index2.html">Каталог товарів <span class="arrow"></span></a>
+            <a href="index.html">Головна сторінка</a>
+            <a href="index4.html">Про нас</a>
+        </nav>
+
+        <div class="search-bar">
+            <span class="search-icon"></span>
+            <input type="text" placeholder="Пошук товарів...">
+        </div>
+
+        <div class="user-actions">
+            
+            <div class="burger-menu-wrapper">
+                <button class="burger-btn" onclick="toggleBurgerMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                
+                <div class="burger-menu" id="burgerMenu">
+                    <a href="index.html">Головна сторінка</a>
+                    <a href="index2.html">Каталог товарів</a>
+                    <a href="index4.html">Про нас</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-brands-section">
+    <div class="hero-slider">
+        <div class="slide active" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('банер1.png');"></div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('банер2.png');"></div>
+        <div class="slide" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('банер1.jpg');"></div>
+    </div>
+
+    <div class="glass-decoration glass-top-right"></div>
+    <div class="glass-decoration glass-mid-left"></div>
+    <div class="glass-decoration glass-bottom-left"></div>
+
+    <div class="hero-content">
+        <div class="sparkle-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L14.8 9.2L22 12L14.8 14.8L12 22L9.2 14.8L2 12L9.2 9.2L12 2Z" fill="white" stroke="white" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        
+        <h1 class="hero-title">БРЕНДИ</h1>
+        <p class="hero-subtitle">Відкрийте світ преміальної моди</p>
+        <p class="hero-description">Ексклюзивні колекції від найкращих світових брендів</p>
+        
+        <a href="index.html?search=" id="heroBtn" class="hero-btn">
+            Переглянути колекцію <span class="arrow">→</span>
+        </a>
+        
+<div class="scroll-down-container">
+    <div class="scroll-down-text">Гортайте вниз</div>
+    <div class="bouncing-arrow">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+            <path d="M12 5V19M12 19L5 12M12 19L19 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </div>
+</div>    </div>
+</section>
+
+
+<section class="brands-catalog-section">
+    <div class="brands-grid">
+        
+        <a href="index2.html?search=Nike" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/1.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">Nike</h3>
+                <p class="brand-subtitle">Just Do It</p>
+                <p class="brand-tagline">Спортивний одяг та взуття світового класу</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <a href="index2.html?search=Jordan" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/2.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">Jordan</h3>
+                <p class="brand-subtitle">Flight Culture</p>
+                <p class="brand-tagline">Легендарний стрітвір та баскетбольний стиль</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <a href="index2.html?search=CP" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/3.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">C.P. Company</h3>
+                <p class="brand-subtitle">Function and Use</p>
+                <p class="brand-tagline">Інноваційний італійський технологічний одяг</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <a href="index2.html?search=Coach" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/4.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">Coach</h3>
+                <p class="brand-subtitle">Modern Luxury</p>
+                <p class="brand-tagline">Преміальні аксесуари та вишуканий стиль</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <a href="index2.html?search=Boss" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/5.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">Boss</h3>
+                <p class="brand-subtitle">Be Your Own Boss</p>
+                <p class="brand-tagline">Німецька класика, строгі силуети та кежуал</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <a href="index2.html?search=Polo" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/6.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">Polo Ralph Lauren</h3>
+                <p class="brand-subtitle">Classic American Style</p>
+                <p class="brand-tagline">Елегантний повсякденний препі-стиль</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <a href="index2.html?search=Armani" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/7.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">Emporio Armani</h3>
+                <p class="brand-subtitle">Italian Elegance</p>
+                <p class="brand-tagline">Люксовий вуличний та класичний італійський одяг</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+        <a href="index2.html?search=Stone" class="brand-card" style="background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('card/8.png'); text-decoration: none;">
+            <div class="brand-header-meta">
+                <h3 class="brand-title">Stone Island</h3>
+                <p class="brand-subtitle">Culture of Research</p>
+                <p class="brand-tagline">Культовий бренд з фокусом на технологічну обробку матеріалів</p>
+            </div>
+            <div class="brand-footer-meta">
+                <div class="brand-action-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<section class="brand-not-found-section">
+    <div class="not-found-container">
+        <h2 class="not-found-title">Не знайшли свій бренд?</h2>
+        <p class="not-found-subtitle">Ми постійно додаємо нові бренди до нашої колекції</p>
+        
+        <a href="index2.html" class="catalog-all-btn">
+            Переглянути весь каталог 
+            <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<div class="footer-container">
+        
+        <div class="footer-brand-column">
+            <div class="footer-logo">Price Drop</div>
+            <p class="footer-about">ЗНАЙДИ ОДЯГ, ЩО ПІДХОДИТЬ ТВОЄМУ СТИЛЮ. Перегляньте наш різноманітний асортимент ретельно створеного одягу.</p>
+            
+<div class="social-icons">
+    <a href="#" class="social-link outline-link x-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+    </a>
+    <a href="#" class="social-link filled-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/price.drop_?igsh=cGFoYTJhbXVodnJw&utm_source=qr" class="social-link outline-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></rect><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+    </a>
+    <a href="#" class="social-link outline-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+    </a>
+</div>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>МАГАЗИН</h3>
+            <a href="#">Новинки</a>
+            <a href="#">Розпродаж</a>
+            <a href="#">Бренди</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>СТИЛІ ОДЯГУ</h3>
+            <a href="#">Повсякденний</a>
+            <a href="#">Офіційний</a>
+            <a href="#">Вечірній</a>
+            <a href="#">Спортивний</a>
+        </div>
+
+        <div class="footer-links-column">
+            <h3>ПОПУЛЯРНІ БРЕНДИ</h3>
+            <a href="#">POLO RALPH</a>
+            <a href="#">NIKE</a>
+            <a href="#">STONE ISLAND</a>
+            <a href="#">JORDAN</a>
+            <a href="#">BOSS</a>
+        </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+        <p class="copyright">Price Drop © 2000-2026, Усі права захищені</p>
+        <div class="payment-methods">
+            <span class="pay-card">Visa</span>
+            <span class="pay-card">MasterCard</span>
+            <span class="pay-card">PayPal</span>
+            <span class="pay-card">ApplePay</span>
+            <span class="pay-card">GooglePay</span>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    const burgerToggle = document.getElementById('burgerToggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    burgerToggle.addEventListener('click', () => {
+        burgerToggle.classList.toggle('active');
+
+        navLinks.classList.toggle('active');
+    });
+</script>
+<script>
+    function toggleBurgerMenu() {
+    const btn = document.querySelector('.burger-btn');
+    const menu = document.getElementById('burgerMenu');
+    
+    btn.classList.toggle('active');
+    menu.classList.toggle('active');
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector(".search-bar input");
+    
+    if (searchInput) {
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                const query = e.target.value.trim();
+                if (query) {
+                    window.location.href = `index2.html?search=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    }
+});
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".hero-slider .slide");
+    let currentSlide = 0;
+    const slideInterval = 4000;
+
+    function nextSlide() {
+        slides[currentSlide].classList.remove("active");
+        
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        slides[currentSlide].classList.add("active");
+    }
+
+    if (slides.length > 0) {
+        setInterval(nextSlide, slideInterval);
+    }
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const searchInput = document.querySelector(".search-bar input");
+    
+    if (searchInput) {
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                const query = e.target.value.trim();
+                if (query) {
+                    window.location.href = `index2.html?search=${encodeURIComponent(query)}`;
+                }
+            }
+        });
+    }
+});
+</script>
+</body>
+</html>
