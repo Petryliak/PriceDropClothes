@@ -2334,3 +2334,44 @@ body {
         object-fit: contain !important;
     }
 }
+@media (max-width: 768px) {
+    .stats-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px !important;
+        margin-bottom: 30px !important;
+    }
+
+    .stat-item {
+        text-align: center !important;
+        width: 100% !important;
+        border: none !important;
+    }
+
+    .stat-item h2 {
+        font-size: 2rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .stat-item p {
+        font-size: 1rem !important;
+        margin: 0 !important;
+    }
+
+    .hero-images {
+        display: flex !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .main-models-img {
+        width: 58% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+}
