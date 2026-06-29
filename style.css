@@ -2376,41 +2376,4 @@ body {
     }
 }
 
-@media (max-width: 768px) {
-    .style-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 20px !important;
-        padding: 0 15px !important;
-    }
 
-    .style-card {
-        width: 100% !important;
-        height: 180px !important;
-        position: relative !important;
-        overflow: hidden !important;
-    }
-
-    .card-w30, .card-w60 {
-        width: 100% !important;
-    }
-
-    .style-card img {
-        position: absolute !important;
-        top: auto !important;
-        bottom: 0 !important;
-        right: 0 !important;
-        width: auto !important;
-        height: 100% !important;
-        object-fit: contain !important;
-    }
-
-    .style-name {
-        position: absolute !important;
-        top: 20px !important;
-        left: 20px !important;
-        bottom: auto !important;
-        right: auto !important;
-        z-index: 2 !important;
-    }
-}
