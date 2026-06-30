@@ -547,6 +547,16 @@
     </div>
 </footer>
 
+    <script>
+    function toggleBurgerMenu() {
+        const btn = document.querySelector('.burger-btn');
+        const menu = document.getElementById('burgerMenu');
+        
+        btn.classList.toggle('active');
+        menu.classList.toggle('active');
+    }
+</script>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
     const burgerToggle = document.getElementById('burgerToggle');
