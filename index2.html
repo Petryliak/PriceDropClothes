@@ -848,24 +848,14 @@ document.getElementById('submitOrderBtn').onclick = () => {
     text += `🚚 <b>Доставка:</b> За тарифами перевізника\n`;
     text += `💰 <b>ЗАГАЛЬНА СУМА до сплати: ${total.toFixed(2)} грн</b>`;
 
-    let photoUrl = cart.length > 0 ? cart[0].img : "";
-    const isLocalFile = window.location.protocol === 'file:';
     let method = "sendMessage";
-    let bodyData = { chat_id: TELEGRAM_CHAT_ID, parse_mode: 'html' };
-
-    if (photoUrl && !isLocalFile) {
-        method = "sendPhoto";
-        if (!photoUrl.startsWith('http')) {
-            photoUrl = window.location.origin + '/' + photoUrl;
-        }
-        bodyData.photo = photoUrl;
-        bodyData.caption = text;
-    } else {
-        bodyData.text = text;
-    }
+    let bodyData = { 
+        chat_id: TELEGRAM_CHAT_ID, 
+        parse_mode: 'html',
+        text: text 
+    };
 
     const URI_API = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/${method}`;
-
     fetch(URI_API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
